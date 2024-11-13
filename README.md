@@ -36,9 +36,15 @@ Gets all the services on the computer. Can be used to get services on remote com
 `[-Exclude <String[]>]`
 
 ### Screenshot/Example
-
+In this example I used the Get-Service cmdlet pipelined to the Where-Object cmdlet and specifed only running services to be apart of the output.
 ![image](https://github.com/user-attachments/assets/80bc530b-7dad-4039-8bcf-b8c1481e4a7c)
 
+## Get-Process
+Gets all the processes that are running on the computer
 
+### Syntax
+`[[-Name] <String[]>]` or `[-Id <Int32[]>]`
+
+`[-Module]`
 
 
