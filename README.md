@@ -96,9 +96,38 @@ Performs an action or operation on each item in a group of input objects.
 `[-End <ScriptBlock>]`
 
 ### Screenshot/Example
-In this example I used 4 numbers to represent objects and pipelined it to the ForEachObject cmdlet. I then specified the word that I wanted to output for each object that was listed. In this case I specified 4 objects so the word hello displayed 4 times
+In this example I used 4 numbers to represent objects and pipelined it to the ForEachObject cmdlet. I then specified the word that I wanted to output for each object that was listed. In this case I specified 4 objects so the word hello displayed 4 times.
 ![image](https://github.com/user-attachments/assets/0b8316f7-913a-48d3-9136-e9dccd460fd8)
 
+## Format-Wide
+Allows you to format objects as a wider table. This can be used when trying to read output in a neater way.
+
+### Syntax
+`[[-Property] <Object>]`
+
+`[-Autosize]`
+
+`[-Column <int>]`
+
+`[-GroupBy <Object>]`
+
+### Screenshot/Example
+In this example I use the Get-Service output and pipline it to the Format Wide cmdlet to allow the outputting to be changed to a wide table.
+![image](https://github.com/user-attachments/assets/b3ce40ae-b36e-408e-89b9-3ebe283a0946)
+
+## Format-List
+Allows you to format objects as a list. The value is seperated by a colon. In the example it goes object then the value.
+
+### Syntax
+`[[-Property <Object[]>]`
+
+`[-GroupBy <Object>]`
+
+`[-View <string>]`
+
+### Screenshot/Example
+In this example I use the Get-Service cmdlet and pipeline it to the Format-List cmdlet to chnage the format to a list output.
+![image](https://github.com/user-attachments/assets/538bc90e-41cc-4944-8a4d-c85b5752178c)
 
 
 # Classwork Commands
