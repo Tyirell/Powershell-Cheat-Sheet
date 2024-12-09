@@ -129,6 +129,44 @@ Allows you to format objects as a list. The value is seperated by a colon. In th
 In this example I use the Get-Service cmdlet and pipeline it to the Format-List cmdlet to chnage the format to a list output.
 ![image](https://github.com/user-attachments/assets/538bc90e-41cc-4944-8a4d-c85b5752178c)
 
+## Get-Help
+Gives you information about a powershell command.
+
+### Syntax
+`[[-Name] <String>]`
+
+`[-Path <String>]`
+
+`[-Category <String[]>]`
+
+ `[-Full]`
+
+### Screenshot/Example
+In this example I use the Get-Help command and specify the Get-Process command to figure out more about the command and what it's used for. I also use the full parameter to determine which parameters are required.
+![image](https://github.com/user-attachments/assets/127f8310-38ff-46c9-8942-ab3ec8777450)
+
+## Get-NetAdapter
+Gets network adapter information.
+
+### Syntax
+`[[-Name] <String[]>]`
+
+`[-IncludeHidden]`
+
+`[-Physical]`
+
+### Screenshot/Example
+In this example I use the Get-NetApadater command and again pipe it to the Where-Object cmdlet to get only net adapter information on the ones that status is up.
+![image](https://github.com/user-attachments/assets/8d11a718-f671-41cb-b237-4858cdb5e623)
+
+## Export-CSV
+
+### Syntax
+`-InputObject <PSObject>`
+
+`[[-Path] <String>]`
+
+`[-LiteralPath <String>]`
 
 # Classwork Commands
 
