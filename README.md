@@ -495,7 +495,124 @@ Allows you to move an item from one location to another.
 `[-Filter <String>]`
 
 ### Screenshot/Example
-In this example I move my Test.csv file from my downloads to my Documents folder using the Move-Item cmdlet.
+In this example I move my Test.csv file from my downloads to my Documents folder using the Move-Item cmdlet. I make sure to specify the destination parameter in this example.
+![image](https://github.com/user-attachments/assets/52116425-6eb9-4e6e-a580-bdb7370b76d6)
+
+## Copy-Item
+Allows you to copy a file or directory from location to another
+
+### Syntax
+`[-Path] <String[]>`
+
+`[[-Destination] <String>]`
+
+`[-Container]`
+
+`[-Force]`
+
+### Screenshot/Example
+In this example I use the Copy-Item command to copy the test1.txt file from my downloads folder to my Favorites folder.
+![image](https://github.com/user-attachments/assets/7a3aae53-37b5-401f-bd8b-853fc6663411)
+
+## New-PSDrive
+Creates a temporary or permanent drive based on a mapped location.
+
+### Syntax
+`[-Name] <String>`
+
+`[-PSProvider] <String>`
+
+`[-Root] <String>`
+
+### Screenshot/Example
+In this example I use the New-PSDrive command to map a network folder I created. I specify the drive letter to be S but this can be any letter.
+![image](https://github.com/user-attachments/assets/ad3c6316-2b00-434b-95ca-d8610fe31e1d)
+
+## Add-Printer
+Allows you to add a printer to a computer
+
+### Syntax
+`[-Name] <String>`
+
+`-PortName <String>`
+
+`[-DriverName] <String>`
+
+`[-Comment <String>]`
+
+### Screenshot/Example
+In this example I use the Add-Printer cmdlet and specify the driver needed to make the printer work. I also specify the portname and all together this sucessfully adds a printer to your computer. ![image](https://github.com/user-attachments/assets/815ceb43-a6ac-4607-a36b-5ee6ab0c651a)
+
+## Disable-ADAccount
+Allows you to disable an Active Directory account.
+
+### Syntax
+`[-AuthType <ADAuthType>]`
+
+`[-Credential <PSCredential>]`
+
+`[-Identity] <ADAccount>`
+
+`[-Partition <String>]`
+
+### Screenshot/Example
+In this example I use the Disable-ADAccount cmdlet to disable the account John Doe in my Active Directory setup. ![image](https://github.com/user-attachments/assets/9b0892f4-4d52-4f94-bd8b-1bdbb2e7051b)
+
+## Enable-ADAccount
+Allows you to enable an Active Directory account
+
+### Syntax
+`[-AuthType <ADAuthType>]`
+
+`[-Credential <PSCredential>]`
+
+`[-Identity] <ADAccount>`
+
+`[-Partition <String>]`
+
+### Screenshot/Example
+In this example I use the Enable-ADAccount command to enable the John Doe account I imported in my Active Directory setup.
+![image](https://github.com/user-attachments/assets/4d1dcc0c-b389-411d-8949-810f4168b675)
+
+
+## Remove-ADUser
+Allows you to remove an Active Directory User
+
+### Syntax
+`[-AuthType <ADAuthType>]`
+
+`[-Credential <PSCredential>]`
+
+`[-Identity] <ADUser>`
+
+`[-Partition <String>]`
+
+### Screenshot/Example
+In this example I use the Remove-ADUSer command to delete the account John Doe. By default when running this command you will get the prompt asking if your sure you want to delete the account. You can remove this prompt by using the -Confirm parameter and specifying False. ![image](https://github.com/user-attachments/assets/e06ad656-cbff-4819-99b8-1d97398b9c2a)
+
+## New-ScheduledTaskTrigger
+Allows you to create a task trigger. Determines when the task will run
+
+### Syntax
+`[-Daily]`
+
+`[-DaysInterval <UInt32>]`
+
+`[-RandomDelay <TimeSpan>]`
+
+`-At <DateTime>`
+
+### Screenshot/Example
+In this example I create a Task Trigger to allow the Powershell Script to run daily at 12:00am. For this command you need to pair it with other cmdlets for the task to be scheduled properly.
+![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+## New-ScheduledTaskAction
+Allows you to create a task action. This determines what will happen during your scheduled task.
+
+
+
+
+
 
 
 
