@@ -156,10 +156,11 @@ Gets network adapter information.
 `[-Physical]`
 
 ### Screenshot/Example
-In this example I use the Get-NetApadater command and again pipe it to the Where-Object cmdlet to get only net adapter information on the ones that status is up.
+In this example I use the Get-NetAdapter command and again pipe it to the Where-Object cmdlet to get only net adapter information on the ones that status is up.
 ![image](https://github.com/user-attachments/assets/8d11a718-f671-41cb-b237-4858cdb5e623)
 
 ## Export-CSV
+Allows you to convert objects into a comma seperated value format and save this to a file.
 
 ### Syntax
 `-InputObject <PSObject>`
@@ -167,6 +168,58 @@ In this example I use the Get-NetApadater command and again pipe it to the Where
 `[[-Path] <String>]`
 
 `[-LiteralPath <String>]`
+
+`[[-Delimiter] <Char>]`
+
+### Screenshot/Example
+In this example I use the get-service command and pipeline it to the Export-CSV cmdlet. I specified the Delimeter "/" so now between every object there will be that symbol.
+![image](https://github.com/user-attachments/assets/c6ed7d6a-7aa2-4bbe-90e7-89fde40a3472)
+
+## Get-Content
+Gets the contents of an item specified by location
+
+### Syntax
+`[-ReadCount <Int64>]`
+
+`[-TotalCount <Int64>]`
+
+`[-Tail <Int32>]`
+
+`[-Path] <String[]>`
+
+### Screenshot/Example
+In this example I view the contents of the Test.CSV file by using the Get-Content cmdlet.
+![image](https://github.com/user-attachments/assets/d4aad676-677f-49bd-a26a-c384b9b6c950)
+
+## Get-WMIObject
+Used to get information on windows management instrumentation objects(WMI)
+
+### Syntax
+`[-Class] <String>`
+
+`[[-Property] <String[]>]`
+
+`[-Filter <String>]`
+
+`[-Amended]`
+
+### Screenshot/Example
+In this example I use the Get-WMIObject cmdlet and specify the Class parameter to get information about my current operating system.
+![image](https://github.com/user-attachments/assets/552bebeb-6837-4d8e-b9c0-436062e03bcf)
+
+## Get-EventLog
+Gets a list of event logs on your local or remote computers
+
+### Syntax
+`[-LogName] <String>`
+
+`[-ComputerName <String[]>]`
+
+`[-Newest <Int32>]`
+
+### Screenshot/Example
+In this example I use the Get-EventLog cmdlet and specify the System logs. I also use the newest parameter to only get the newest 10 events logged.
+![image](https://github.com/user-attachments/assets/b86db722-78e4-4171-8a61-936ef5904b6c)
 
 # Classwork Commands
 
