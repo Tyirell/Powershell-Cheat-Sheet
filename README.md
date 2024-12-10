@@ -221,5 +221,53 @@ Gets a list of event logs on your local or remote computers
 In this example I use the Get-EventLog cmdlet and specify the System logs. I also use the newest parameter to only get the newest 10 events logged.
 ![image](https://github.com/user-attachments/assets/b86db722-78e4-4171-8a61-936ef5904b6c)
 
+## Get-Member
+Used to display the properties and methods of an objects.
+
+### Syntax
+`[-InputObject <PSObject>]`
+
+`[[-Name] <String[]>]`
+
+`[-MemberType <PSMemberTypes>]`
+
+### Screenshot/Example
+In this example I use the Get-Process cmdlet and pipeline it to the get-member cmdlet to get information about the properties and methods available with Get-Process.
+![image](https://github.com/user-attachments/assets/6e95011f-ea9f-4137-9b8b-e67d55ec3e90)
+
+## Enable PS-Remoting
+Used to enable remoting on your remote device. In most cases you must run this command with administrator privileges.
+
+### Syntax
+`[-Force]`
+
+`[-SkipNetworkProfileCheck]`
+
+`[-WhatIf]`
+
+`[-Confirm]`
+
+### Screenshot/Example
+In this example I use the Enable-PSRemoting cmdlet to allow others to remote into my computer. 
+![image](https://github.com/user-attachments/assets/b8a8f262-d0c9-4bdb-983e-98c3a5607fa0)
+
+## Enter-PSSession
+Used to start a session with a remote computer.
+
+### Syntax
+`[-ComputerName] <String>`
+
+`[-EnableNetworkAccess]`
+
+`[[-Credential] <PSCredential>]`
+
+### Screenshot/Example
+In this example I use the Server1 VM I created that is a domain controller and remote into Server2 using the Enter-PSSession Cmdlet.
+![image](https://github.com/user-attachments/assets/c990eaeb-34fb-4984-bf06-6017650f5a00)
+
+### Invoke-Command
+
+
+
 # Classwork Commands
 
