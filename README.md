@@ -370,6 +370,75 @@ Installs roles of features on your local or remote computer/server.
 `[-IncludeManagementTools]`
 
 ### Screenshot/Example
+In this example I use the Install-WindowsFeature cmdlet to install the DHCP feature and I specify the include management tools parameter.
+![image](https://github.com/user-attachments/assets/05c2b2eb-fac2-4601-a660-f7a6ec09c4e0)
+
+## Get-NetIPAddress
+Gets your current IP address configurations.
+
+### Syntax
+`[[-IPAddress] <String[]>]`
+
+`[-InterfaceIndex <UInt32[]>]`
+
+`[-InterfaceAlias <String[]>]`
+
+### Screenshot/Example
+In this example I check exactly what my IP address configuration is using the Get-NetIPAddress cmdlet.
+![image](https://github.com/user-attachments/assets/bb5bd55d-694b-4112-aacd-0e33b3f1cc74)
+
+## Set-DNSClientServerAddress
+Allows you to set up an IP that points to your designated DNS server.
+
+### Syntax
+`[-InterfaceAlias] <String[]>`
+
+`[-ServerAddresses <String[]>]`
+
+`[-Validate]`
+
+`[-ResetServerAddresses]`
+
+### Screenshot/Example
+In this example I use the Set-DNSClientServerAddress command to point to an IP address of 192.168.0.50. I also specify a interface index in this command which is needed for this command to work. 
+![image](https://github.com/user-attachments/assets/49c73319-0c08-4fea-aa56-120d5056c5a9)
+
+## Set-ExecutionPolicy 
+Controls the execution policy on your machine. This determines if you can run scripts, load configuration files, or if scripts have to be digitally signed before they can run.
+
+### Syntax
+`[-ExecutionPolicy] <ExecutionPolicy>`
+
+`[[-Scope] <ExecutionPolicyScope>]`
+
+`[-Force]`
+
+### Screenshot/Example
+In this example I use the Set-ExecutionPolicy cmdlet and specify the exection policy to remote signed.
+![image](https://github.com/user-attachments/assets/0975aff6-7707-4606-b176-2cbd8e7d45c2)
+
+## New-ADOrganizationalUnit
+Allows you to create an OU. You must have active directory installed for this command to work.
+
+### Syntax
+`[-Instance <ADOrganizationalUnit>]`
+
+`[-ManagedBy <ADPrincipal>]`
+
+`[-Name] <String>`
+
+`[-OtherAttributes <Hashtable>]`
+
+### Screenshot/Example
+In this example I use the New-ADOrganizationalUnit command to create a new OU called Employee's and specify the -Path where this OU will be stored.
+![image](https://github.com/user-attachments/assets/9aaff083-f11a-4978-8cfa-427ead775b12)
+
+
+
+
+
+
+
 
 
 
