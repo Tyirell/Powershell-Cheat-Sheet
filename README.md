@@ -433,6 +433,71 @@ Allows you to create an OU. You must have active directory installed for this co
 In this example I use the New-ADOrganizationalUnit command to create a new OU called Employee's and specify the -Path where this OU will be stored.
 ![image](https://github.com/user-attachments/assets/9aaff083-f11a-4978-8cfa-427ead775b12)
 
+## Initializing Arrays
+A data structure that stores a collection of multiple items
+
+### Syntax for creating Arrays
+`$test = @()`
+
+`$test = @('Zero','One','Two','Three')`
+
+`$test = @(
+    'Zero'
+    'One'
+    'Two'
+    'Three'
+)`
+
+`$data = 'Zero','One','Two','Three'`
+
+### Screenshot/Example
+In this example I create an array called TG and assign it values 4,5,6,7. I use the indexing feature to get the 2nd indexed item in the array(6).
+![image](https://github.com/user-attachments/assets/a3637c09-a3bc-439f-9400-735676b92a25)
+
+## Variables
+Allows you to store a value and use it for later.
+
+### Syntax for creating a variable
+
+` Specify by data type [int]$i = 10`
+
+` Just intialize a standard variable $i = "Hello"`
+
+### Screenshot/Example
+In this example I create a variable and store the Get-Service cmdlet in it. After I call this variable. Remember when you intialize a cmdlet like Get-Service only the current state of the command is saved under the variable. ![image](https://github.com/user-attachments/assets/6d1a1ec0-d6bd-4863-9f0f-d2d0d738cf9a)
+
+## Get-Childitem
+Gets the files and directories under a specified location.
+
+### Syntax
+`[[-Path] <string[]>]`
+
+`[[-Filter] <string>]`
+
+`[-Include <string[]>]`
+
+`[-Exclude <string[]>]`
+
+### Screenshot/Example
+In this example I use the Get-Childitem command under my tyire directory to see all files and folders listed there.
+![image](https://github.com/user-attachments/assets/8e504070-68d9-41c8-b380-909b1d3bd3a6)
+
+## Move-Item
+Allows you to move an item from one location to another.
+
+### Syntax
+`[-Path] <String[]>`
+
+`[[-Destination] <String>]`
+
+`[-Force]`
+
+`[-Filter <String>]`
+
+### Screenshot/Example
+In this example I move my Test.csv file from my downloads to my Documents folder using the Move-Item cmdlet.
+
+
 
 
 
