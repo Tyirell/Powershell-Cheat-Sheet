@@ -265,7 +265,115 @@ Used to start a session with a remote computer.
 In this example I use the Server1 VM I created that is a domain controller and remote into Server2 using the Enter-PSSession Cmdlet.
 ![image](https://github.com/user-attachments/assets/c990eaeb-34fb-4984-bf06-6017650f5a00)
 
-### Invoke-Command
+## Invoke-Command
+Used to run commands on both local and remote computers
+
+### Syntax
+`[-ScriptBlock] <ScriptBlock>`
+
+`[[-Session] <PSSession[]>]`
+
+`[-ThrottleLimit <Int32>]`
+
+### Screenshot/Example
+In this example I use the Invoke-Command Cmdlet to run the Get-Service command on my Server2 VM.
+![image](https://github.com/user-attachments/assets/5ee7c0ed-7c14-4ef4-abac-99714f35455a)
+
+## Import-Module
+Imports module into your current session
+
+### Syntax
+`[-Global]`
+
+`[-Prefix <String>]`
+
+`[-Name] <String[]>`
+
+`[-Function <String[]>]`
+
+### Screenshot/Example
+In this example I use the Import-Module cmdle to import the Net-Adapter module into my current Server1 VM session.
+![image](https://github.com/user-attachments/assets/5c641540-d189-4db8-8a24-056c67b85f25)
+
+## Get-Location
+Gives you information of your current location your currently in (directory).
+
+### Syntax
+`[-PSProvider <String[]>]`
+
+`[-PSDrive <String[]>]`
+
+`[-Stack]`
+
+### Screenshot/Example
+In this example I use the Get-Location cmdlet to determine my current directory I'm in.
+![image](https://github.com/user-attachments/assets/0a1c95cd-6918-4694-bce7-d5903817526c)
+
+## New-Item
+Allows you to create new items such as directories and files.
+
+### Syntax
+`[-Path] <String[]>`
+
+`[-ItemType <String>]`
+
+`[-Value <Object>]`
+
+`[-Force]`
+
+### Screenshot/Example
+In this example I create a new file called Hi.txt. I use the itemtype parameter and specify that its a file and set the path to downloads using the New-Item cmdlet.
+![image](https://github.com/user-attachments/assets/26fd5f71-83b4-4584-bdd5-4fcb43112762)
+
+## New-SMBShare
+Creates an SMBShare and allows you to specify access to it. In order to create a share you must already have a folder created.
+
+### Syntax
+`[-Path] <String>`
+
+`[-Name] <String>`
+
+`[-FullAccess <String[]>]`
+
+`[-ChangeAccess <String[]>]`
+
+### Screenshot/Example
+In this example I use the New-SMBShare cmdlet and create three seperate shares for my respective groups HR, IT and Admin I created. I make sure to only allow users who are in the desginated groups access to the shares using the full access parameter. IN this I made sure to create directories ahead of time to make this work.
+![image](https://github.com/user-attachments/assets/0753a4f2-1f0c-4dbb-8967-9dd0796fe0##1b)
+
+## Get-ADComputer
+Allows you to see your current computers joined to your domain.
+
+### Syntax
+`[-AuthType <ADAuthType>]`
+
+`[-Credential <PSCredential>]`
+
+`-Filter  <String>`
+
+`[-Properties <String[]>]`
+
+### Screenshot/Example
+In this example I use the Get-ADComputer command to see all of the computers/servers that are currently joined to my domain.
+![image](https://github.com/user-attachments/assets/f26643aa-feaf-4a8c-9c1e-22f5a35db39d)
+
+## Install-WindowsFeature
+Installs roles of features on your local or remote computer/server.
+
+### Syntax
+`[-Name] <Feature[]>`
+
+`[-Restart]`
+
+`[-IncludeAllSubFeature]`
+
+`[-IncludeManagementTools]`
+
+### Screenshot/Example
+
+
+
+
 
 
 
