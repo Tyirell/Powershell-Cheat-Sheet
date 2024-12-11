@@ -322,8 +322,7 @@ Allows you to create new items such as directories and files.
 `[-Force]`
 
 ### Screenshot/Example
-In this example I create a new file called Hi.txt. I use the itemtype parameter and specify that its a file and set the path to downloads using the New-Item cmdlet.
-![image](https://github.com/user-attachments/assets/26fd5f71-83b4-4584-bdd5-4fcb43112762)
+In this example I create a new file called Hi.txt. I use the itemtype parameter and specify that its a file and set the path to downloads using the New-Item cmdlet. ![image](https://github.com/user-attachments/assets/26fd5f71-83b4-4584-bdd5-4fcb43112762)
 
 ## New-SMBShare
 Creates an SMBShare and allows you to specify access to it. In order to create a share you must already have a folder created.
@@ -339,7 +338,8 @@ Creates an SMBShare and allows you to specify access to it. In order to create a
 
 ### Screenshot/Example
 In this example I use the New-SMBShare cmdlet and create three seperate shares for my respective groups HR, IT and Admin I created. I make sure to only allow users who are in the desginated groups access to the shares using the full access parameter. IN this I made sure to create directories ahead of time to make this work.
-![image](https://github.com/user-attachments/assets/0753a4f2-1f0c-4dbb-8967-9dd0796fe0##1b)
+![image](https://github.com/user-attachments/assets/ea5cf2ab-1bf6-4282-b96d-0b5fe03acd26)
+
 
 ## Get-ADComputer
 Allows you to see your current computers joined to your domain.
@@ -705,5 +705,4 @@ In this example I use the RegisterScheduledTask cmdlet and set a taskname of Dai
 
 
 
-# Classwork Commands
 
