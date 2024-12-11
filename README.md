@@ -609,6 +609,83 @@ In this example I create a Task Trigger to allow the Powershell Script to run da
 ## New-ScheduledTaskAction
 Allows you to create a task action. This determines what will happen during your scheduled task.
 
+### Syntax
+`[-Id <String>]`
+
+`[-Execute] <String>`
+
+`[[-Argument] <String>]`
+
+`[[-WorkingDirectory] <String>]`
+
+### Screenshot/Example
+In this example I use the same taskschedule setup as the previous command. In this I specify the Powershell app to run a script.
+![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+## New-ScheduledTaskPrincipal
+Specifies the user that that the task will use to run.
+
+### Syntax
+`[[-Id] <String>]`
+
+`[[-RunLevel] <RunLevelEnum>]`
+
+`[[-ProcessTokenSidType] <ProcessTokenSidTypeEnum>]`
+
+`[[-RequiredPrivilege] <String[]>]`
+
+### Screenshot/Example
+In this example I use the New-ScheduledTaskPrincipal cmdlet to specify the account used for the task (GARRAWAY\Administrator) and I also specify the run level as highest to use the most elevated privileges.
+![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+## New-ScheduledTaskSettingsSet
+Allows you to specify the task settings used.
+
+### Syntax
+`[-DisallowDemandStart]`
+
+`[-DisallowHardTerminate]`
+
+`[-Compatibility <CompatibilityEnum>]`
+
+`[-DeleteExpiredTaskAfter <TimeSpan>]`
+
+### Screenshot/Example
+In this example I used the New-ScheduledTaskSettingsSet cmdlet to use default settings by not specifying any parameters after the command. In this I use the same screenshot since these commands all need to be used together ot successfully create a scheduled task ![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+## New-ScheduledTask
+Allows you to finalize scheduled task settings. Defines the tasks actions, triggersm principals, and settings.
+
+### Syntax
+New-ScheduledTask
+`[[-Action] <CimInstance[]>]`
+
+`[[-Principal] <CimInstance>]`
+
+`[[-Settings] <CimInstance>]`
+
+`[[-Trigger] <CimInstance[]>`
+
+### Screenshot/Example
+In this example I use the New-ScheduledTask cmdlet and pass the previous task commands which I initialized as variables.
+![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+## RegisterScheduledTask
+This allows you to Register your task on your device.
+
+### Syntax
+`[-TaskName] <String>`
+
+`[[-TaskPath] <String>]`
+
+`[-Action] <CimInstance[]>`
+
+`[[-Description] <String>]`
+
+### Screenshot/Example
+In this example I use the RegisterScheduledTask cmdlet and set a taskname of DailyHTMLLog. I also send an input object of $task which is the variable that held the New-ScheduledTask cmdlet and all the other variable settings together ![image](https://github.com/user-attachments/assets/9c2fa7e0-c900-4d2d-8197-0934925087db)
+
+
 
 
 
